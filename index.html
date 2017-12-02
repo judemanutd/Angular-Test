@@ -12,14 +12,15 @@
     const div = document.getElementById("val");
     var text = '';
     for (var i = 1; i <= 100; i++) {
+        text += i;
         if (i % 5 === 0)
-            text += i + ' Jupiter' + "<br>";
-        else if (i % 9 === 0)
-            text += i + ' Earth Pluto' + "<br>";
-        else if (i % 3 === 0)
-            text += i + ' Earth' + "<br>";
-        else
-            text += i + "<br>";
+            text += ' Jupiter';
+        if (i % 9 === 0)
+            text += ' Pluto';
+        if (i % 3 === 0)
+            text += ' Earth';
+
+        text += "<br>";
     }
     div.innerHTML = text;
 
